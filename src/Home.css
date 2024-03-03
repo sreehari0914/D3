@@ -1,0 +1,38 @@
+.clickbutton {
+    background-color: #f06543;
+    background-image: linear-gradient(315deg, #f06543 0%, #ffbe3d 74%); 
+}
+
+.clickcolor {
+    color: #ffbe3d;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://downloader.la/temp/[Downloader.la]-65e41c4e50a3d.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* Adjust the opacity as needed */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+}

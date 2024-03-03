@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './components/ui/button'
 import Home from './Home'
+import DashB from './DashB'
+import Product from './Product'
+import { createClient } from "@supabase/supabase-js"
+import Content from './Content'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,8 +20,8 @@ const supabase = createClient("https://uuarudjgyanlzastwiko.supabase.co", "eyJhb
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path='/' element={<Home/>}/>
-      <Route path="/dashboard" element={<>
+      <Route path='/' element={<Content/>}/>
+      <Route path="/test" element={<>
         <SignIn>
           <div>Add Signed In components</div>
         </SignIn>
@@ -25,6 +29,8 @@ const router = createBrowserRouter(
           <div>Back to Sign IN</div>
         </SignedOut>
       </>}/>
+      <Route path="/dashboard" element={<DashB/>}/>
+      <Route path="/product" element={<Product/>}/>
     </>
   )
 )
@@ -33,7 +39,7 @@ function App() {
 
   return (
     <>
-      <Button>Hello</Button>
+    <RouterProvider router={router}/>
     </>
   )
 }
